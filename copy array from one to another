@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int arr[100],n,arr2[100];
+    printf("size of array: ");
+    scanf("%d",&n);
+    int i,j;
+    printf("elements of array: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        arr2[i]= arr[i];
+    }
+    printf(" copied  array: ");
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",arr2[i]);
+    }
+    
+}
