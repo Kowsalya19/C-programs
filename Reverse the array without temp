@@ -27,4 +27,36 @@ int main()
         printf("%d ",arr[i]);
     }
 }
-    
+
+********************************************** using for loop ******************************************************
+
+
+
+#include<stdio.h>
+int main()
+{
+    int arr[100],n,i,j;
+    printf("size of array: ");
+    scanf("%d",&n);
+    printf("elements of array: ");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            arr[i] = arr[i]+ arr[j];
+            arr[j] = arr[i]-arr[j];
+            arr[i] = arr[i]-arr[j];
+        }
+        
+    }
+    printf("resultant array: ");
+    for(i=0;i<n;i++)
+    {
+       
+        printf("%d ",arr[i]);
+    }
+}
