@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int arr[10],n,i,target;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&target);
+    int start = 0;
+    int cur_sum = 0;
+    for(i=0;i<n;i++)
+    {
+        cur_sum += arr[i];
+        while(cur_sum >target && start<i)
+        {
+            cur_sum -= arr[start];
+            start++;
+        }
+         if(cur_sum == target)
+        {
+        printf("%d %d",start,i);
+        return 0;
+        }
+    }
+    printf("not subarray found");
+}
