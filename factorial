@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,fact = 1;
+    scanf("%d",&n);
+    if(n<0)
+    printf("no");
+    else
+    {
+        while(n>1)
+        {
+            fact *=n;
+            n--;
+        }
+        printf("%d",fact);
+    }
+}
